@@ -1,17 +1,19 @@
 # CX Service
 
-Customer Experience service that provides some features, for example: automated email reply functionality using Large Language Models (LLM) for complaint categorization and response generation.
+Customer Experience service that provides automated email reply functionality using Large Language Models (LLM) for complaint categorization and response generation with Gmail integration.
 
 ## Features
 
-- **Automated Email Processing**: Gmail integration with Pub/Sub webhooks for real-time email processing
-- **LLM-Powered Categorization**: Fine-tuned models for complaint email classification
-- **Template-Based Responses**: Predefined email templates for different complaint categories
-- **Background Processing**: Celery-based asynchronous email processing
-- **Comprehensive Logging**: Email processing logs with confidence scores and predictions
-- **Health Monitoring**: Multi-service health checks (Database, Redis, Celery)
-- **API Documentation**: Interactive Swagger/OpenAPI documentation
-- **Development Tools**: Code quality tools (Ruff, MyPy), pre-commit hooks
+- **🔄 Automated Email Processing**: Gmail integration with Pub/Sub webhooks for real-time email processing
+- **🤖 LLM-Powered Categorization**: Fine-tuned models for complaint email classification with confidence scoring
+- **📧 Smart Auto-Reply**: Automated responses for emails with [Test] prefix and high confidence scores
+- **⚡ Background Processing**: Celery-based asynchronous email processing with Redis message broker
+- **📊 Comprehensive Logging**: Email processing logs with confidence scores and predictions
+- **🏥 Health Monitoring**: Multi-service health checks (Database, Redis, Celery)
+- **📚 API Documentation**: Interactive Swagger/OpenAPI documentation with authentication
+- **🛠️ Development Tools**: Code quality tools (Ruff, MyPy), pre-commit hooks, Docker support
+- **🔐 OAuth2 Integration**: Google OAuth2 flow for Gmail access
+- **📱 Test Endpoints**: Queue testing and environment variable validation
 
 ## Requirements
 
@@ -23,13 +25,28 @@ Customer Experience service that provides some features, for example: automated 
 
 ## Quick Start
 
+### **Option 1: Docker (Recommended)**
 ```bash
 cd cx-service
 
-# Create virtual environment (if not exists)
-uv venv
+# Copy environment variables
+cp .env.example .env
+# Edit .env with your configuration
 
-# Activate virtual environment
+# Start all services (Django, Celery, Redis, PostgreSQL)
+docker-compose up --build
+
+# Access the application
+# Web: http://localhost:8000
+# API Docs: http://localhost:8000/api/docs/
+```
+
+### **Option 2: Local Development**
+```bash
+cd cx-service
+
+# Create virtual environment
+uv venv
 source .venv/bin/activate
 
 # Install dependencies
@@ -184,7 +201,32 @@ ENVIRONMENT=local
 
 ## Development
 
-### Available Commands
+## Docker Commands
+
+```bash
+# Start all services
+docker-compose up --build
+
+# Start in background
+docker-compose up -d
+
+# View logs
+docker-compose logs -f web
+docker-compose logs -f celery
+
+# Run Django commands
+docker-compose exec web python src/manage.py migrate
+docker-compose exec web python src/manage.py createsuperuser
+docker-compose exec web python src/manage.py shell_plus
+
+# Stop services
+docker-compose down
+
+# Rebuild specific service
+docker-compose build web
+```
+
+### Local Development Commands
 
 ```bash
 # Install dependencies
@@ -334,10 +376,20 @@ The CX Service provides comprehensive API documentation through an integrated Sw
 - **GET** `/health-check/` - System health status
 
 #### Gmail Integration
-- **POST** `/autoreply/api/webhook/` - Gmail webhook notifications
+- **POST** `/autoreply/api/webhook/` - Gmail webhook notifications (Pub/Sub)
 - **GET** `/autoreply/api/oauth2/start/` - Start OAuth2 flow
 - **GET** `/autoreply/api/oauth2/callback/` - OAuth2 callback
 - **POST** `/autoreply/api/gmail/watch/` - Register Gmail watch
+- **POST** `/autoreply/api/gmail/stop-watch/` - Stop Gmail watch
+
+#### Testing & Development
+- **GET** `/v1/autoreply/test-queue/` - Test Celery queue functionality
+- **GET** `/v1/autoreply/test-env/` - Test environment variables access
+
+#### Email Processing
+- **Automatic Processing**: Emails with `[Test]` prefix in subject
+- **Confidence-based Replies**: Auto-reply for confidence > 80%
+- **Manual Review**: Low confidence emails flagged for review
 
 ### Authentication
 
@@ -348,27 +400,109 @@ The API documentation requires JuloDB authentication:
 3. Access the protected Swagger documentation at `/api/docs/`
 4. Use the logout button to end your session
 
-## Features
+## Email Processing Workflow
 
-### API Features
-- **Django REST Framework** - Full API support
-- **Gmail Webhook Integration** - `/autoreply/api/webhook/` for Pub/Sub notifications
-- **Health Check Endpoints** - `/health-check/` and comprehensive service monitoring
-- **Interactive API Documentation** - Swagger UI at `/api/docs/` with authentication
-- **Auto-Reply Management** - Template and model management APIs
+1. **📨 Email Received**: Gmail sends Pub/Sub notification to webhook
+2. **🔍 Subject Filter**: Only processes emails with `[Test]` prefix
+3. **🤖 LLM Classification**: Categorizes email content with confidence score
+4. **⚙️ Auto-Reply Logic**:
+   - **High Confidence (>80%)**: Sends automatic reply
+   - **Low Confidence (<80%)**: Flags for manual review
+5. **📝 Logging**: Records all processing steps and results
+6. **✓ Mark as Read**: Processed emails marked as read
 
-### Development Tools
-- **Django Extensions** - Enhanced management commands
-- **Debug Toolbar** - Development debugging (when enabled)
+## Environment Setup
 
-### Background Tasks
-- **Start Celery Worker** - `./start_celery.sh`
-- **Test Celery Config** - `./test_celery.sh`
-- **Email Processing** - Automated processing of incoming Gmail messages
-- **LLM Integration** - Background categorization and response generation
+### Required Environment Variables
+```bash
+# Core Django Settings
+SECRET_KEY="your-secret-key"
+DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
 
-### Testing & Coverage
-- **Run All Tests** - `uv run python src/manage.py test`
-- **Test Coverage** - `./test_coverage.sh`
-- **Autoreply Tests** - `uv run python src/manage.py test autoreply.tests`
+# Database (Docker)
+DB_HOST=db
+DB_PORT=5432
+DB_NAME=cx_service
+DB_USER=postgres
+DB_PASSWORD=postgres
+
+# Redis (Docker)
+REDIS_HOST=redis
+REDIS_PORT=6379
+BROKER_URL=redis://redis:6379/0
+
+# Google Credentials
+CX_GOOGLE_OAUTH2_CREDENTIALS='{"web":{"client_id":"...","client_secret":"...","redirect_uris":["..."]}}'
+CX_GOOGLE_CREDENTIALS_FILE='{"type":"service_account","project_id":"..."}'
+```
+
+## Architecture
+
+### Services
+- **🌐 Django Web Server**: API endpoints and webhook handling
+- **⚡ Celery Worker**: Background email processing
+- **📊 Redis**: Message broker and caching
+- **💾 PostgreSQL**: Data persistence
+- **🔍 Gmail API**: Email integration with OAuth2
+
+### Key Components
+- **🔗 Webhook Handler**: Processes Gmail Pub/Sub notifications
+- **🤖 LLM Classifier**: Fine-tuned model for email categorization
+- **📧 Auto-Reply Engine**: Template-based response generation
+- **📊 Health Monitoring**: Service status and diagnostics
+
+## Development Workflow
+
+### Code Quality
+```bash
+# Format code with Ruff
+uv run ruff format .
+
+# Lint code with Ruff
+uv run ruff check . --fix
+
+# Type checking with MyPy
+uv run mypy . or ./run-mypy
+```
+
+### Testing
+```bash
+# Run all tests
+uv run python src/manage.py test
+
+# Test coverage
+./test_coverage.sh
+
+# Test Celery queue
+curl -X GET http://localhost:8000/v1/autoreply/test-queue/
+
+# Test environment variables
+curl -X GET http://localhost:8000/v1/autoreply/test-env/
+```
+
+## Troubleshooting
+
+### Common Issues
+
+**1. Celery Tasks Not Running**
+```bash
+# Check Redis connection
+redis-cli ping
+
+# Test queue functionality
+curl -X GET http://localhost:8000/v1/autoreply/test-queue/
+```
+
+**2. Gmail API Issues**
+```bash
+# Check OAuth2 credentials
+curl -X GET http://localhost:8000/v1/autoreply/test-env/
+```
+
+**3. Environment Variables**
+```bash
+# Validate JSON format
+echo $CX_GOOGLE_OAUTH2_CREDENTIALS | python -m json.tool
+```
 
