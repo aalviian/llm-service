@@ -10,7 +10,7 @@ dependencies = [
     "coverage>=7.10.0",
     "datasets>=4.0.0",
     "ddtrace>=3.8.0",
-    "django==4.2.8",
+    "django==5.2.5",
     "django-cacheops>=7.2",
     "django-cors-headers>=4.7.0",
     "django-debug-toolbar>=4.3.0",
