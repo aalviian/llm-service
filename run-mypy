@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Get changed files compared to master branch
+mypy src/ --config-file mypy.ini
+

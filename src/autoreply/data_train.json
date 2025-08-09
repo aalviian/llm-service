@@ -1,0 +1,400 @@
+{
+  "text": "Apakah saya bisa mendapatkan SKL secara digital?",
+  "label": "Loan/Payment:SKL Request"
+},
+{
+  "text": "Saya butuh SKL untuk pengajuan dokumen lain.",
+  "label": "Loan/Payment:SKL Request"
+},
+{
+  "text": "Mohon kirim ulang notifikasi permintaan GRAB.",
+  "label": "GRAB permintaan notifikasi"
+},
+{
+  "text": "Sudah 3 hari pengajuan, tapi belum ada pencairan.",
+  "label": "Loan/Payment:Disbursement"
+},
+{
+  "text": "Aplikasi GRAB selalu crash saat pengajuan.",
+  "label": "GRAB pengajuan error - lainnya"
+},
+{
+  "text": "Apakah saya bisa mendapatkan SKL secara digital?",
+  "label": "Loan/Payment:SKL Request"
+},
+{
+  "text": "Saya ingin mengajukan permohonan keringanan cicilan.",
+  "label": "Loan/Payment:Permohonan keringanan"
+},
+{
+  "text": "Saya ingin perbarui informasi profil GRAB saya.",
+  "label": "GRAB perubahan data"
+},
+{
+  "text": "Muncul error code saat saya login.",
+  "label": "Application:Error"
+},
+{
+  "text": "Saya tidak menerima notifikasi dari aplikasi GRAB.",
+  "label": "GRAB permintaan notifikasi"
+},
+{
+  "text": "Terdapat error saat mengajukan layanan di GRAB.",
+  "label": "GRAB pengajuan error - lainnya"
+},
+{
+  "text": "Saya ingin mengajukan permohonan keringanan cicilan.",
+  "label": "Loan/Payment:Permohonan keringanan"
+},
+{
+  "text": "Mohon kirim ulang notifikasi permintaan GRAB.",
+  "label": "GRAB permintaan notifikasi"
+},
+{
+  "text": "Apakah saya bisa mendapatkan SKL secara digital?",
+  "label": "Loan/Payment:SKL Request"
+},
+{
+  "text": "Saya ingin mengganti nomor telepon di akun GRAB saya.",
+  "label": "GRAB perubahan data"
+},
+{
+  "text": "Tolong jelaskan detail promo GRAB terbaru.",
+  "label": "GRAB lainnya"
+},
+{
+  "text": "Dana saya belum cair sejak kemarin.",
+  "label": "Loan/Payment:Disbursement"
+},
+{
+  "text": "Saya tidak menerima notifikasi dari aplikasi GRAB.",
+  "label": "GRAB permintaan notifikasi"
+},
+{
+  "text": "Ingin tahu cara menggunakan fitur baru di GRAB.",
+  "label": "GRAB lainnya"
+},
+{
+  "text": "Apakah saya bisa menunda pembayaran bulan ini?",
+  "label": "Loan/Payment:Permohonan keringanan"
+},
+{
+  "text": "Mohon info tentang program keringanan pembayaran pinjaman.",
+  "label": "Loan/Payment:Permohonan keringanan"
+},
+{
+  "text": "Mohon kirim ulang notifikasi permintaan GRAB.",
+  "label": "GRAB permintaan notifikasi"
+},
+{
+  "text": "Muncul error code saat saya login.",
+  "label": "Application:Error"
+},
+{
+  "text": "Saya ingin mengganti nomor telepon di akun GRAB saya.",
+  "label": "GRAB perubahan data"
+},
+{
+  "text": "Sudah 3 hari pengajuan, tapi belum ada pencairan.",
+  "label": "Loan/Payment:Disbursement"
+},
+{
+  "text": "Saya ingin menerima notifikasi atas pemesanan saya di GRAB.",
+  "label": "GRAB permintaan notifikasi"
+},
+{
+  "text": "Tolong bantu ubah email saya di sistem GRAB.",
+  "label": "GRAB perubahan data"
+},
+{
+  "text": "Tolong bantu ubah email saya di sistem GRAB.",
+  "label": "GRAB perubahan data"
+},
+{
+  "text": "Sudah 3 hari pengajuan, tapi belum ada pencairan.",
+  "label": "Loan/Payment:Disbursement"
+},
+{
+  "text": "Muncul error code saat saya login.",
+  "label": "Application:Error"
+},
+{
+  "text": "Saya ingin menerima notifikasi atas pemesanan saya di GRAB.",
+  "label": "GRAB permintaan notifikasi"
+},
+{
+  "text": "Mohon bantuannya, pinjaman belum ditransfer ke rekening saya.",
+  "label": "Loan/Payment:Disbursement"
+},
+{
+  "text": "Saya ingin mengganti nomor telepon di akun GRAB saya.",
+  "label": "GRAB perubahan data"
+},
+{
+  "text": "Saya tidak bisa lanjut pengajuan di aplikasi GRAB.",
+  "label": "GRAB pengajuan error - lainnya"
+},
+{
+  "text": "Ada kesalahan data pribadi saya di aplikasi GRAB.",
+  "label": "GRAB perubahan data"
+},
+{
+  "text": "Terdapat error saat mengajukan layanan di GRAB.",
+  "label": "GRAB pengajuan error - lainnya"
+},
+{
+  "text": "Saya ada kendala dengan akun GRAB saya.",
+  "label": "GRAB lainnya"
+},
+{
+  "text": "Notifikasi dari GRAB tidak masuk ke HP saya.",
+  "label": "GRAB permintaan notifikasi"
+},
+{
+  "text": "Apakah saya bisa mendapatkan SKL secara digital?",
+  "label": "Loan/Payment:SKL Request"
+},
+{
+  "text": "Dana saya belum cair sejak kemarin.",
+  "label": "Loan/Payment:Disbursement"
+},
+{
+  "text": "Mohon dikirimkan SKL pinjaman saya.",
+  "label": "Loan/Payment:SKL Request"
+},
+{
+  "text": "Saya tidak bisa akses menu utama di aplikasi.",
+  "label": "Application:Error"
+},
+{
+  "text": "Notifikasi dari GRAB tidak masuk ke HP saya.",
+  "label": "GRAB permintaan notifikasi"
+},
+{
+  "text": "Saya butuh SKL untuk pengajuan dokumen lain.",
+  "label": "Loan/Payment:SKL Request"
+},
+{
+  "text": "Saya tidak bisa akses menu utama di aplikasi.",
+  "label": "Application:Error"
+},
+{
+  "text": "Mohon dikirimkan SKL pinjaman saya.",
+  "label": "Loan/Payment:SKL Request"
+},
+{
+  "text": "Apakah saya bisa menunda pembayaran bulan ini?",
+  "label": "Loan/Payment:Permohonan keringanan"
+},
+{
+  "text": "Saya tidak menerima notifikasi dari aplikasi GRAB.",
+  "label": "GRAB permintaan notifikasi"
+},
+{
+  "text": "Mohon info tentang program keringanan pembayaran pinjaman.",
+  "label": "Loan/Payment:Permohonan keringanan"
+},
+{
+  "text": "Tolong bantu ubah email saya di sistem GRAB.",
+  "label": "GRAB perubahan data"
+},
+{
+  "text": "Saya tidak bisa lanjut pengajuan di aplikasi GRAB.",
+  "label": "GRAB pengajuan error - lainnya"
+},
+{
+  "text": "Mohon dikirimkan SKL pinjaman saya.",
+  "label": "Loan/Payment:SKL Request"
+},
+{
+  "text": "Saya ingin perbarui informasi profil GRAB saya.",
+  "label": "GRAB perubahan data"
+},
+{
+  "text": "Aplikasi sering keluar sendiri secara tiba-tiba.",
+  "label": "Application:Error"
+},
+{
+  "text": "Saya belum menerima dana pinjaman saya.",
+  "label": "Loan/Payment:Disbursement"
+},
+{
+  "text": "Saya ingin menerima notifikasi atas pemesanan saya di GRAB.",
+  "label": "GRAB permintaan notifikasi"
+},
+{
+  "text": "Mohon info tentang program keringanan pembayaran pinjaman.",
+  "label": "Loan/Payment:Permohonan keringanan"
+},
+{
+  "text": "Saya ingin mengajukan permohonan keringanan cicilan.",
+  "label": "Loan/Payment:Permohonan keringanan"
+},
+{
+  "text": "Saya ingin perbarui informasi profil GRAB saya.",
+  "label": "GRAB perubahan data"
+},
+{
+  "text": "Saya ingin mengajukan permohonan keringanan cicilan.",
+  "label": "Loan/Payment:Permohonan keringanan"
+},
+{
+  "text": "Saya ingin mengajukan permohonan keringanan cicilan.",
+  "label": "Loan/Payment:Permohonan keringanan"
+},
+{
+  "text": "Tolong bantu ubah email saya di sistem GRAB.",
+  "label": "GRAB perubahan data"
+},
+{
+  "text": "Saya butuh SKL untuk pengajuan dokumen lain.",
+  "label": "Loan/Payment:SKL Request"
+},
+{
+  "text": "Aplikasi sering keluar sendiri secara tiba-tiba.",
+  "label": "Application:Error"
+},
+{
+  "text": "Mohon info tentang program keringanan pembayaran pinjaman.",
+  "label": "Loan/Payment:Permohonan keringanan"
+},
+{
+  "text": "Saya butuh SKL untuk pengajuan dokumen lain.",
+  "label": "Loan/Payment:SKL Request"
+},
+{
+  "text": "Ada kesalahan data pribadi saya di aplikasi GRAB.",
+  "label": "GRAB perubahan data"
+},
+{
+  "text": "Saya butuh SKL untuk pengajuan dokumen lain.",
+  "label": "Loan/Payment:SKL Request"
+},
+{
+  "text": "Mohon kirim ulang notifikasi permintaan GRAB.",
+  "label": "GRAB permintaan notifikasi"
+},
+{
+  "text": "Aplikasi GRAB selalu crash saat pengajuan.",
+  "label": "GRAB pengajuan error - lainnya"
+},
+{
+  "text": "Terdapat error saat mengajukan layanan di GRAB.",
+  "label": "GRAB pengajuan error - lainnya"
+},
+{
+  "text": "Aplikasi tidak bisa dibuka.",
+  "label": "Application:Error"
+},
+{
+  "text": "Notifikasi dari GRAB tidak masuk ke HP saya.",
+  "label": "GRAB permintaan notifikasi"
+},
+{
+  "text": "Mohon dikirimkan SKL pinjaman saya.",
+  "label": "Loan/Payment:SKL Request"
+},
+{
+  "text": "Aplikasi GRAB selalu crash saat pengajuan.",
+  "label": "GRAB pengajuan error - lainnya"
+},
+{
+  "text": "Saya butuh SKL untuk pengajuan dokumen lain.",
+  "label": "Loan/Payment:SKL Request"
+},
+{
+  "text": "Tolong jelaskan detail promo GRAB terbaru.",
+  "label": "GRAB lainnya"
+},
+{
+  "text": "Saya tidak bisa lanjut pengajuan di aplikasi GRAB.",
+  "label": "GRAB pengajuan error - lainnya"
+},
+{
+  "text": "Terdapat error saat mengajukan layanan di GRAB.",
+  "label": "GRAB pengajuan error - lainnya"
+},
+{
+  "text": "Aplikasi GRAB selalu crash saat pengajuan.",
+  "label": "GRAB pengajuan error - lainnya"
+},
+{
+  "text": "Tolong bantu ubah email saya di sistem GRAB.",
+  "label": "GRAB perubahan data"
+},
+{
+  "text": "Sudah 3 hari pengajuan, tapi belum ada pencairan.",
+  "label": "Loan/Payment:Disbursement"
+},
+{
+  "text": "Setiap pengajuan saya di GRAB gagal.",
+  "label": "GRAB pengajuan error - lainnya"
+},
+{
+  "text": "Tolong bantu ubah email saya di sistem GRAB.",
+  "label": "GRAB perubahan data"
+},
+{
+  "text": "Saya tidak bisa akses menu utama di aplikasi.",
+  "label": "Application:Error"
+},
+{
+  "text": "Saya ingin perbarui informasi profil GRAB saya.",
+  "label": "GRAB perubahan data"
+},
+{
+  "text": "Muncul error code saat saya login.",
+  "label": "Application:Error"
+},
+{
+  "text": "Setiap pengajuan saya di GRAB gagal.",
+  "label": "GRAB pengajuan error - lainnya"
+},
+{
+  "text": "Saya ingin meminta surat keterangan lunas pinjaman.",
+  "label": "Loan/Payment:SKL Request"
+},
+{
+  "text": "Notifikasi dari GRAB tidak masuk ke HP saya.",
+  "label": "GRAB permintaan notifikasi"
+},
+{
+  "text": "Saya ingin perbarui informasi profil GRAB saya.",
+  "label": "GRAB perubahan data"
+},
+{
+  "text": "Saya ingin mengganti nomor telepon di akun GRAB saya.",
+  "label": "GRAB perubahan data"
+},
+{
+  "text": "Saya ingin menerima notifikasi atas pemesanan saya di GRAB.",
+  "label": "GRAB permintaan notifikasi"
+},
+{
+  "text": "Saya tidak bisa lanjut pengajuan di aplikasi GRAB.",
+  "label": "GRAB pengajuan error - lainnya"
+},
+{
+  "text": "Saya belum menerima dana pinjaman saya.",
+  "label": "Loan/Payment:Disbursement"
+},
+{
+  "text": "Saya bingung dengan layanan terbaru GRAB.",
+  "label": "GRAB lainnya"
+},
+{
+  "text": "Terdapat error saat mengajukan layanan di GRAB.",
+  "label": "GRAB pengajuan error - lainnya"
+},
+{
+  "text": "Terdapat error saat mengajukan layanan di GRAB.",
+  "label": "GRAB pengajuan error - lainnya"
+},
+{
+  "text": "Saya ingin menerima notifikasi atas pemesanan saya di GRAB.",
+  "label": "GRAB permintaan notifikasi"
+},
+{
+  "text": "Muncul error code saat saya login.",
+  "label": "Application:Error"
+}

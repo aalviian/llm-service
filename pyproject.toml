@@ -1,0 +1,59 @@
+[project]
+name = "julo-django-skeleton"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aliyun-python-sdk-core>=2.16.0",
+    "celery>=5.5.2",
+    "coverage>=7.10.0",
+    "datasets>=4.0.0",
+    "ddtrace>=3.8.0",
+    "django==4.2.8",
+    "django-cacheops>=7.2",
+    "django-cors-headers>=4.7.0",
+    "django-debug-toolbar>=4.3.0",
+    "django-environ>=0.12.0",
+    "django-extensions>=4.1",
+    "django-redis>=5.4.0",
+    "django-stubs>=5.2.0",
+    "djangorestframework>=3.16.0",
+    "drf-spectacular>=0.28.0",
+    "factory-boy>=3.3.3",
+    "google-api-python-client>=2.177.0",
+    "google-auth>=2.40.3",
+    "google-auth-oauthlib>=1.2.1",
+    "ipython>=9.2.0",
+    "mypy>=1.15.0",
+    "mypy-extensions>=1.1.0",
+    "pandas>=2.3.1",
+    "pre-commit>=4.2.0",
+    "psycopg2-binary>=2.9.10",
+    "redis>=6.1.0",
+    "requests>=2.32.3",
+    "ruff>=0.11.11",
+    "sentry-sdk>=2.29.1",
+    "torch>=2.7.1",
+    "transformers>=4.54.0",
+]
+
+[tool.ruff]
+lint.select = ["I"]  # Enable all imported rules
+line-length = 100
+target-version = "py312"
+# Sort
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-wrap-aliases = true
+# Formater
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+
+[tool.mypy]
+plugins = ["mypy_django_plugin.main"]
+
+[tool.django-stubs]
+django_settings_module = "src.config.settings"

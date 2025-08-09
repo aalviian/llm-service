@@ -1,0 +1,89 @@
+{
+  "training_data": [
+  {
+    "text": "Saya belum menerima dana pinjaman sampai sekarang.",
+    "label": "Loan/Payment:Disbursement"
+  },
+  {
+    "text": "Mohon bantuannya, saya ingin mendapatkan SKL untuk pelunasan.",
+    "label": "Loan/Payment:SKL Request"
+  },
+  {
+    "text": "Bagaimana cara mengajukan keringanan pembayaran cicilan?",
+    "label": "Loan/Payment:Permohonan keringanan"
+  },
+  {
+    "text": "Saya sudah ajukan pinjaman tapi dana belum cair.",
+    "label": "Loan/Payment:Disbursement"
+  },
+  {
+    "text": "Saya tidak menerima notifikasi pengambilan Grab hari ini.",
+    "label": "GRAB permintaan notifikasi"
+  },
+  {
+    "text": "Saya ingin mengganti nomor telepon untuk akun Grab saya.",
+    "label": "GRAB perubahan data"
+  },
+  {
+    "text": "Aplikasi error saat saya mencoba login ke akun saya.",
+    "label": "Application:Error"
+  },
+  {
+    "text": "Saat mengajukan Grab, aplikasi tiba-tiba tertutup sendiri.",
+    "label": "GRAB pengajuan error - lainnya"
+  },
+  {
+    "text": "Tolong bantu periksa pengajuan Grab saya yang tidak muncul.",
+    "label": "GRAB pengajuan error - lainnya"
+  },
+  {
+    "text": "Kenapa pengajuan Grab saya ditolak tanpa alasan?",
+    "label": "GRAB lainnya"
+  },
+  {
+    "text": "Saya ingin cetak SKL untuk pelunasan pinjaman saya.",
+    "label": "Loan/Payment:SKL Request"
+  },
+  {
+    "text": "Tolong kirim ulang notifikasi Grab ke email saya.",
+    "label": "GRAB permintaan notifikasi"
+  },
+  {
+    "text": "Data alamat saya di Grab perlu diperbarui.",
+    "label": "GRAB perubahan data"
+  },
+  {
+    "text": "Saya mengalami error saat mengunggah dokumen pengajuan.",
+    "label": "Application:Error"
+  },
+  {
+    "text": "Sudah 2 hari belum ada dana masuk ke rekening saya.",
+    "label": "Loan/Payment:Disbursement"
+  },
+  {
+    "text": "Mohon info tentang cara meminta surat keterangan lunas.",
+    "label": "Loan/Payment:SKL Request"
+  },
+  {
+    "text": "Saya ingin minta keringanan karena penghasilan menurun.",
+    "label": "Loan/Payment:Permohonan keringanan"
+  },
+  {
+    "text": "Aplikasi saya error dan tidak bisa digunakan.",
+    "label": "Application:Error"
+  },
+  {
+    "text": "Saya belum menerima notifikasi dari Grab sejak kemarin.",
+    "label": "GRAB permintaan notifikasi"
+  },
+  {
+    "text": "Pengajuan Grab saya stuck di proses verifikasi.",
+    "label": "GRAB pengajuan error - lainnya"
+  }
+],
+  "model_name": "./fine_tuned_models/model_20250801_222301"
+}
+
+{
+  "email_body":"Saya bingung dengan layanan terbaru GRAB."
+}

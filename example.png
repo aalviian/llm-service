@@ -1,0 +1,14 @@
+# This is a placeholder for the example.png image
+# 
+# To add the actual screenshot:
+# 1. Take a screenshot of the Swagger UI at http://localhost:8000/api/docs/
+# 2. Save it as 'example.png' in the root directory
+# 3. Replace this placeholder file with the actual image
+#
+# The image should show:
+# - The custom blue/green themed Swagger UI
+# - The "CX Service API" header with logout button
+# - List of available API endpoints
+# - Interactive documentation interface
+# - Roboto font styling
+# - Animated background (if visible in screenshot)

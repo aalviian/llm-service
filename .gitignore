@@ -1,0 +1,42 @@
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+
+# Python-generated files
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+### Editor
+.vscode/*
+.idea
+
+# Virtual environments
+.venv
+.env
+
+# mypy
+.mypy_cache/
+.ruff_cache
+.dmypy.json
+dmypy.json
+
+# nix
+.services
+erl_crash.dump
+result
+result-*
+
+# others
+upload_async_state/*
+logs
+staticfiles/
+
+.coverage
+.coveragerc
+.DS_Store
+fine_tuned_models/
